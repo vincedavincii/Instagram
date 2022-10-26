@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+import Feeds from "../components/Feeds";
 import Header from "../components/Header";
 
 export default function Home() {
 	return (
-		<div>
+		<div className="bg-gray-50 min-h-screen">
 			<Head>
 				<title>Create Next App</title>
 				<meta
@@ -20,6 +21,8 @@ export default function Home() {
 			{/* Header section */}
 
 			<Header />
+
+			<Feeds />
 		</div>
 	);
 }
