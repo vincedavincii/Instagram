@@ -1,4 +1,5 @@
 import React from "react";
+import Posts from "./Posts";
 import Stories from "./Stories";
 
 const Feeds = () => {
@@ -10,6 +11,8 @@ const Feeds = () => {
 				<Stories />
 
 				{/* posts */}
+
+				<Posts />
 			</section>
 
 			<section>
