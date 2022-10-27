@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import {EllipsisHorizontalIcon} from "@heroicons/react/24/solid";
 import {
@@ -5,6 +6,7 @@ import {
 	HeartIcon,
 	BookmarkSlashIcon,
 	BookmarkIcon,
+	FaceSmileIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -23,23 +25,40 @@ const Post = ({userName, userPhoto, postPhoto, caption}) => {
 
 				<EllipsisHorizontalIcon className="h-5" />
 			</div>
-			{/* post body */}
 
+			{/* post body */}
 			<div>
 				<img
 					src={postPhoto}
 					className="w-full object-contain"
+					alt="user post photo"
 				/>
 			</div>
 
 			{/* Post buttons */}
-
 			<div className="flex justify-between pt-3 px-4">
 				<div className="flex space-x-5">
 					<HeartIcon className="btn" />
 					<ChatBubbleLeftEllipsisIcon className="btn" />
 				</div>
 				<BookmarkIcon className="btn" />
+			</div>
+
+			{/* Post comments */}
+			<div>
+				<p className="p-5 truncate">
+					<span className="font-bold mr-2">{userName}</span>
+					{caption}
+				</p>
+				<form className="flex items-center p-5">
+					<FaceSmileIcon className="h-7" />
+					<input
+						type="text"
+						placeholder="Enter your comment"
+						className="flex-1 border-none focus:ring-0"
+					/>
+					<button className="font-bold text-blue-500">Post</button>
+				</form>
 			</div>
 		</div>
 	);
