@@ -12,7 +12,7 @@ import Image from "next/image";
 
 const Post = ({userName, userPhoto, postPhoto, caption}) => {
 	return (
-		<div>
+		<div className="bg-white border rounded-md my-8">
 			{/* Post Header */}
 			<div className="flex items-center p-5">
 				<img
