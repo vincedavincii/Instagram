@@ -8,6 +8,7 @@ const nextConfig = {
 			"media-exp1.licdn.com",
 			"i.pravatar.cc",
 			"images.unsplash.com",
+			"lh3.googleusercontent.com",
 		],
 	},
 };

@@ -3,10 +3,18 @@ import Posts from "./Posts";
 import SideProfileSuggestion from "./SideProfileSuggestion";
 import SideProfile from "./SideProfile";
 import Stories from "./Stories";
+import {useSession} from "next-auth/react";
 
 const Feeds = () => {
+	const {data: session} = useSession();
 	return (
-		<main className="grid grid-cols-1 md:grid-cols-3 md:max-w-6xl mx-auto">
+		<main
+			className={`grid ${
+				session
+					? "grid-cols-1 md:grid-cols-3 md:max-w-6xl mx-auto"
+					: "grid-cols-1 md:grid-cols-2 md:max-w-3xl mx-auto"
+			}`}
+		>
 			<section className="md:col-span-2">
 				{/*  stories*/}
 
